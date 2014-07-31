@@ -102,10 +102,10 @@ with a loop of some description.
           if my_resource_hash.member?(param)
             raise(Puppet::ParseError, "create_resources_hash_from(): dynamic_parameter '#{param}' already exists in resource hash")
           end
-          my_resource_hash[param] = sprintf(value,[i])
+          my_resource_hash[param] = sprintf(value,i)
         end
       end
-      result[sprintf(formatted_string,[i])] = my_resource_hash
+      result[sprintf(formatted_string,i)] = my_resource_hash
     end
 
     result
